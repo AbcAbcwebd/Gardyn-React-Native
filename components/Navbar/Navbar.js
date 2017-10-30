@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { Text, View, Image, StyleSheet, Container, Left, Button, Icon, Title, Header, Body, Right } from 'react-native';
 
 export default class Navbar extends Component {
   render() {
     return (
-      <View
-        style={styles.parentView}
-      >
-        <Image
-          style={styles.logo}
-          source={require("../../images/leaf.png")}
-        />
-        <Text style={styles.title}>Gardyn</Text>
-      </View>
+
+
+         <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name='menu' />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+        </Header>
+      </Container>
+
     );
   }
 }

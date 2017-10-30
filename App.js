@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Navbar from "./components/Navbar";
+import PlantCard from "./components/PlantCard";
 
 export default class App extends React.Component {
   render() {
@@ -8,6 +9,9 @@ export default class App extends React.Component {
       <View>
         <Navbar 
           style={styles.navbar}
+        />
+        <PlantCard 
+          style={styles.plantCard}
         />
       </View>
     );
@@ -26,4 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     width: 100,
   },
+  plantCard: {
+    alignItems: 'center',
+  }
 });
