@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Navbar from "./components/Navbar";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Text>Gardyn App</Text>
+        <Navbar />
       </View>
     );
   }
