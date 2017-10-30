@@ -4,12 +4,14 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 export default class Navbar extends Component {
   render() {
     return (
-      <View>
+      <View
+        style={styles.parentView}
+      >
         <Image
           style={styles.logo}
           source={require("../../images/leaf.png")}
         />
-        <Text style={styles.title}>Hello world</Text>
+        <Text style={styles.title}>Gardyn</Text>
       </View>
     );
   }
@@ -17,10 +19,17 @@ export default class Navbar extends Component {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 50, 
     height: 50,
+    width: 50,
+    justifyContent: "flex-start",
+    padding: 20,
   },
   title: {
     fontWeight: 'bold',
+    justifyContent: 'space-between',
+  },
+  parentView: {
+    height: 50,
+    padding: 10,
   },
 });
