@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import PlantDetail from "./components/PlantDetail";
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class App extends React.Component {
   state = {
@@ -37,11 +38,13 @@ export default class App extends React.Component {
   render() {
     return (
       <View>
+        <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']}>
           <Navbar 
             style={styles.navbar}
             changeDisplay={this.changeDisplay}
           />
-        {this.Body()}
+         {this.Body()}
+        </LinearGradient>
       </View>
     );
   }

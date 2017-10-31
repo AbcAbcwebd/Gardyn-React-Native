@@ -53,6 +53,6 @@ export default class AllPlants extends Component {
 const styles = StyleSheet.create({
   allPlantsHolder: {
     flexDirection: 'row',
-        flexWrap: 'wrap'
+    flexWrap: 'wrap'
   },
 });
