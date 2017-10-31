@@ -41,7 +41,7 @@ export default class AllPlants extends Component {
               <PlantCard
                 item={item}
                 changeDisplay={this.props.changeDisplay}
-                key={item._id}
+                key={item._id + Math.floor((Math.random() * 100) + 1)}
               />
             ))
         }  

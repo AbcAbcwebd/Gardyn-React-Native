@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, Button } from 'react-native';
 import AllPlants from "../AllPlants";
+import AllGuides from "../AllGuides";
 
 export default class Home extends Component {
   state = {
@@ -13,6 +14,9 @@ export default class Home extends Component {
         <AllPlants 
           changeDisplay={this.props.changeDisplay}
         /> 
+        <AllGuides 
+          changeDisplay={this.props.changeDisplay}
+        />
       </View>
     );
   }
