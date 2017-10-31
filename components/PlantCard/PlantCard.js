@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
   logo: {
     height: 50,
     width: 50,
-    justifyContent: "flex-start",
-    padding: 20,
+    justifyContent: 'space-between',
+    padding: 30,
   },
   title: {
     fontWeight: 'bold',
@@ -31,8 +31,12 @@ const styles = StyleSheet.create({
   },
   parentView: {
     height: 50,
-    padding: 35,
+    padding: 40,
   },
+  displayElement: {
+    height: 60,
+    width: 60,
+  }
 });
 
 export default PlantCard;

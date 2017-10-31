@@ -35,7 +35,7 @@ export default class AllPlants extends Component {
   
   render() {
     return (
-      <View>
+      <View style={styles.allPlantsHolder}>
         {
             this.state.plantData.map(item => (
               <PlantCard
@@ -51,7 +51,8 @@ export default class AllPlants extends Component {
 }
 
 const styles = StyleSheet.create({
-  logo: {
-
+  allPlantsHolder: {
+    flexDirection: 'row',
+        flexWrap: 'wrap'
   },
 });

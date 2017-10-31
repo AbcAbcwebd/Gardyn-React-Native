@@ -22,8 +22,12 @@ const styles = StyleSheet.create({
   logo: {
     height: 50,
     width: 50,
-    justifyContent: "flex-start",
+    justifyContent: 'space-between',
     padding: 20,
+
+    flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
   },
   title: {
     fontWeight: 'bold',
@@ -32,6 +36,7 @@ const styles = StyleSheet.create({
   parentView: {
     height: 50,
     padding: 35,
+
   },
 });
 
