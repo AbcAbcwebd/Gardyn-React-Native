@@ -42,9 +42,6 @@ export default class App extends React.Component {
             changeDisplay={this.changeDisplay}
           />
         {this.Body()}
-        <Text
-          style={styles.footer}
-        >Copyright 2017</Text>
       </View>
     );
   }
@@ -65,7 +62,4 @@ const styles = StyleSheet.create({
   plantCard: {
     alignItems: 'center',
   },
-  footer: {
-    padding: 150,
-  }
 });

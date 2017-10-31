@@ -10,26 +10,26 @@ const Plant = (props) => {
 		      {
 	      	  (!props.data.isCat)
 				?
-				<View>
-				        	<Image
-				        	  style={styles.mainPhoto}
-				              source={{uri: props.data.imageURL }}
-				            />
+				<View style={styles.holder}>
+				<Image
+				    style={styles.mainPhoto}
+				    source={{uri: props.data.imageURL }}
+				/>
 
-								<Text>{props.data.Sunlight} Hours of Sunlight</Text>
-								<Text>{props.data.skillLevel}</Text>
-								<Text>{props.data.Spacing} Inches Spacing</Text>
+								<Text style={styles.textCenter}>{props.data.Sunlight} Hours of Sunlight</Text>
+								<Text style={styles.textCenter}>{props.data.skillLevel}</Text>
+								<Text style={styles.textCenter}>{props.data.Spacing} Inches Spacing</Text>
 			
-						<Text>Climate</Text>
-						<Text>{props.data.Climate}</Text>
-						<Text>Special</Text>
-						<Text>{props.data.Water}</Text>
-						<Text>{props.data.Special}</Text>
+						<Text style={styles.textCenter}>Climate</Text>
+						<Text style={styles.textCenter}>{props.data.Climate}</Text>
+						<Text style={styles.textCenter}>Special</Text>
+						<Text style={styles.textCenter}>{props.data.Water}</Text>
+						<Text style={styles.textCenter}>{props.data.Special}</Text>
 				</View>
 				:
 				<View>
-				  <Text>{props.data.description}</Text>
-				  <Text>Varieties:</Text>
+				  <Text style={styles.textCenter}>{props.data.description}</Text>
+				  <Text style={styles.textCenter}>Varieties:</Text>
 					{
 						props.data.childPlants.map(item => (
 							<PlantCard
@@ -44,11 +44,22 @@ const Plant = (props) => {
 
 const styles = StyleSheet.create({
   mainPhoto: {
-    height: 50,
-    width: 50,
-    justifyContent: "flex-start",
+    width: 150,
+    height: 150,
     padding: 20,
+  }, 
+  holder: {
+  	justifyContent: "center",
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  textCenter: {
+  	textAlign: 'center',
+  }
 });
 
 export default Plant;
