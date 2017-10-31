@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Navbar from "./components/Navbar";
-import PlantCard from "./components/PlantCard";
+import AllPlants from "./components/AllPlants";
 
 export default class App extends React.Component {
   render() {
@@ -10,8 +10,8 @@ export default class App extends React.Component {
         <Navbar 
           style={styles.navbar}
         />
-        <PlantCard 
-          style={styles.plantCard}
+        <AllPlants 
+
         />
       </View>
     );
