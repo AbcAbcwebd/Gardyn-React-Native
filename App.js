@@ -1,9 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Navbar from "./components/Navbar";
-import AllPlants from "./components/AllPlants";
-import { Switch, Route, Router } from 'react-router-dom';
-
+import Home from "./components/Home";
+// import { Switch, Route, Router } from 'react-router-dom';
+import {
+  StackNavigator,
+} from 'react-navigation';
+/*
 export default class App extends React.Component {
   render() {
     return (
@@ -22,6 +25,12 @@ export default class App extends React.Component {
     );
   }
 }
+*/
+
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  PlantPage: { screen: ProfileScreen },
+});
 
 const styles = StyleSheet.create({
   container: {
