@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { Text, View, Image, StyleSheet, TouchableHighlight } from 'react-native';
 
   const PlantCard = (props) => {
     return (
-      <View
-        style={styles.parentView}
-      >
-        <Image
-          style={styles.logo}
-          source={{uri: props.item.imageURL }}
-        />
-        <Text style={styles.title}>{props.item.title}</Text>
-      </View>
+        <TouchableHighlight 
+          style={styles.parentView}
+          onPress={() => {console.log("Pressed")}}
+        >
+          <View>
+            <Image
+              style={styles.logo}
+              source={{uri: props.item.imageURL }}
+            />
+            <Text style={styles.title}>{props.item.title}</Text>
+          </View>
+        </TouchableHighlight>
     );
 }
 
