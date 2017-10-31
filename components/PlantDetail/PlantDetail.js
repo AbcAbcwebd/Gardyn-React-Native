@@ -1,10 +1,6 @@
-import React from "react";
-import Navbar from "../Navbar";
-import Wrapper from "../Wrapper";
-import "./Plant.css";
+import React, { Component } from 'react';
 import PlantCard from "../PlantCard";
 import { Text, View, Image, StyleSheet } from 'react-native';
-import PlantCard from "../PlantCard";
 
 // Uses a ternatry statement to either render a plant or category detail page.
 const Plant = (props) => {
@@ -20,14 +16,12 @@ const Plant = (props) => {
 				              source={{uri: props.imageURL }}
 				            />
 
-						<div className="col-md-6">
 								<Image
 					              source={{uri: 'http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico' }}
 					            />
 								<Text>{props.Sunlight} Hours</Text>
 								<Text>{props.skillLevel}</Text>
 
-								<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
 								<Image
 					              source={{uri: 'http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png' }}
 					            />
@@ -43,7 +37,6 @@ const Plant = (props) => {
 			
 						<Text>Climate</Text>
 						<Text>{props.Climate}</Text>
-						<br />
 						<Text>Special</Text>
 						<Text>{props.Water}</Text>
 						<Text>{props.Special}</Text>

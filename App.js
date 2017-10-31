@@ -14,7 +14,7 @@ export default class App extends React.Component {
       return <Home 
         changeDisplay={this.changeDisplay}
       />
-    } else if (!this.state.displaying.body && this.state.displaying.title) {
+    } else if (!this.state.displaying.body) {
       return <PlantDetail
         data={this.state.displaying}
       />
