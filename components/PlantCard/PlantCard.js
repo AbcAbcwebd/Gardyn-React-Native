@@ -8,7 +8,7 @@ import { Text, View, Image, StyleSheet } from 'react-native';
       >
         <Image
           style={styles.logo}
-          source={{uri: props.image }}
+          source={{uri: props.item.imageURL }}
         />
         <Text style={styles.title}>{props.item.title}</Text>
       </View>
