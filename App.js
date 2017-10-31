@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import PlantDetail from "./components/PlantDetail";
 
 export default class App extends React.Component {
   state = {
@@ -12,6 +13,10 @@ export default class App extends React.Component {
     if (this.state.displaying === "Home"){
       return <Home 
         changeDisplay={this.changeDisplay}
+      />
+    } else if (!this.state.displaying.body && this.state.displaying.title) {
+      return <PlantDetail
+        data={this.state.displaying}
       />
     } else {
       return <Text>Page failed to load</Text>
