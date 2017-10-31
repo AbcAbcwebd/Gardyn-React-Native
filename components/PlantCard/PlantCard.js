@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 
-export default class PlantCard extends Component {
-  render() {
+//export default class PlantCard extends Component {
+  const PlantCard = (props) => {
+//  render() {
     return (
       <View
         style={styles.parentView}
@@ -11,10 +12,10 @@ export default class PlantCard extends Component {
           style={styles.logo}
           source={{uri: 'https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/tomatoplant.jpg?itok=KJNBeA6X'}}
         />
-        <Text style={styles.title}>Tomato</Text>
+        <Text style={styles.title}>{props.item.title}</Text>
       </View>
     );
-  }
+//  }
 }
 
 const styles = StyleSheet.create({
@@ -30,6 +31,8 @@ const styles = StyleSheet.create({
   },
   parentView: {
     height: 50,
-    padding: 10,
+    padding: 35,
   },
 });
+
+export default PlantCard;
