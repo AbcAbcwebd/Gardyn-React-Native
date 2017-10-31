@@ -16,10 +16,14 @@ export default class AllPlants extends Component {
     const parentObj = this;
     fetch('https://gardyn.herokuapp.com/api/plants')
         .then(function (response) {
-          console.log("About to log response")
-          console.log(response._bodyText)
+          console.log("About to log response");
+          console.log(response._bodyText);
+//          console.log("Is array?" + response._bodyText.isArray);
+//          let returnArray = response._bodyText.split("{");
+ //         console.log(returnArray);
+          const returnedObj = JSON.parse(response._bodyText);
           parentObj.setState({
-            plantData: response._bodyText
+            plantData: returnedObj
           })
         })
         .catch(function (error) {
@@ -37,27 +41,15 @@ export default class AllPlants extends Component {
     console.log(this.state.plantData)
   }
 
-  loadContent = () => {
-    this.state.renderCall = true;
-  }
-
-  hideContent = () => {
-    this.state.renderCall = false;
-  }
-
   render() {
     return (
       <View>
         {
-          this.state.renderCall ? (
             this.state.plantData.map(item => (
               <PlantCard
                 item = {item}
               />
             ))
-          ) : (
-            <Text>Waiting to load</Text>
-          )
         }
           <Button
             onPress={this.printState}
@@ -70,35 +62,11 @@ export default class AllPlants extends Component {
             title="API Call"
             color="#841584"
             accessibilityLabel="Learn more about this purple button"
-          />
-          <Button
-            onPress={this.loadContent}
-            title="Run Map Function"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-          />
-          <Button
-            onPress={this.hideContent}
-            title="Hide Contents"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-          />
-      
+          />     
       </View>
     );
   }
 }
-
-/*
-
-
-          <Button
-            onPress={this.printState}
-            title="Check State"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-          />
-          */
 
 const styles = StyleSheet.create({
   logo: {
