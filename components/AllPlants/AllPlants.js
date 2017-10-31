@@ -30,12 +30,12 @@ export default class AllPlants extends Component {
           console.log(error);
         });
   }
-/*
+
   // Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
   componentWillMount() {
       this.retrievePlants();
   }
-*/
+
   printState = () => {
     console.log("Function hit")
     console.log(this.state.plantData)
@@ -50,19 +50,7 @@ export default class AllPlants extends Component {
                 item = {item}
               />
             ))
-        }
-          <Button
-            onPress={this.printState}
-            title="Check State"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-          />
-          <Button
-            onPress={this.retrievePlants}
-            title="API Call"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-          />     
+        }  
       </View>
     );
   }
