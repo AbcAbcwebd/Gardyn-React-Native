@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PlantCard from "../PlantCard";
 import { Text, View, Image, StyleSheet } from 'react-native';
 
-// Uses a ternatry statement to either render a plant or category detail page.
 const Plant = (props) => {
   
 	  return (

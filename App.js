@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import PlantDetail from "./components/PlantDetail";
@@ -27,8 +27,6 @@ export default class App extends React.Component {
 
   changeDisplay = (newValue) => {
     console.log("Function hit")
-    console.log("Setting to:")
-    console.log(newValue);
     this.setState({
       displaying: newValue
     })
@@ -37,8 +35,11 @@ export default class App extends React.Component {
   render() {
     return (
       <View>
-        <Navbar 
+          <Navbar 
             style={styles.navbar}
+            changeDisplay={this.changeDisplay}
+            currentDisplaying={this.state.displaying}
+            onPress={() => this.changeDisplay.bind("Home")}
           />
         {this.Body()}
       </View>
