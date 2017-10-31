@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, Container, Left, Button, Icon, Title, Header, Body, Right } from 'react-native';
+import { Text, View, Image, StyleSheet, Container, Left, Button, Icon, Title, Header, Body, Right, TouchableOpacity } from 'react-native';
 
 export default class Navbar extends Component {
   render() {
@@ -7,10 +7,14 @@ export default class Navbar extends Component {
       <View
         style={styles.parentView}
       >
-        <Image
-          style={styles.logo}
-          source={require("../../images/leaf.png")}
-        />
+        <TouchableOpacity
+          onPress={() => this.props.changeDisplay("Home")}
+        >
+          <Image
+            style={styles.logo}
+            source={require("../../images/leaf.png")}
+          />
+        </TouchableOpacity>
         <Text style={styles.title}>Gardyn</Text>
       </View>
     );

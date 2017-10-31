@@ -25,6 +25,8 @@ export default class App extends React.Component {
     }
   }
 
+  parentOBJ = this;
+
   changeDisplay = (newValue) => {
     console.log("Function hit")
     this.setState({
@@ -38,8 +40,6 @@ export default class App extends React.Component {
           <Navbar 
             style={styles.navbar}
             changeDisplay={this.changeDisplay}
-            currentDisplaying={this.state.displaying}
-            onPress={() => this.changeDisplay.bind("Home")}
           />
         {this.Body()}
       </View>
