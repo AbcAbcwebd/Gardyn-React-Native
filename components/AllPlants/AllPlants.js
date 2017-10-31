@@ -28,7 +28,7 @@ export default class AllPlants extends Component {
         });
   }
 
-  // Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
+  // Before the component can load the retrievePlants function is executed in order to retrieve data from the backend. 
   componentWillMount() {
       this.retrievePlants();
   }
@@ -39,8 +39,9 @@ export default class AllPlants extends Component {
         {
             this.state.plantData.map(item => (
               <PlantCard
-                item = {item}
+                item={item}
                 changeDisplay={this.props.changeDisplay}
+                key={item._id}
               />
             ))
         }  

@@ -12,27 +12,13 @@ const Plant = (props) => {
 				?
 				<View>
 				        	<Image
+				        	  style={styles.mainPhoto}
 				              source={{uri: props.data.imageURL }}
 				            />
 
-								<Image
-					              source={{uri: 'http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico' }}
-					            />
-								<Text>{props.data.Sunlight} Hours</Text>
+								<Text>{props.data.Sunlight} Hours of Sunlight</Text>
 								<Text>{props.data.skillLevel}</Text>
-
-								<Image
-					              source={{uri: 'http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png' }}
-					            />
-								<Text>{props.data.Spacing} Inches</Text>
-
-								<Text>Support: </Text>
-										<Image
-							              source={{uri: 'http://icons.iconarchive.com/icons/icons8/android/512/Very-Basic-Checkmark-icon.png' }}
-							            />
-							            <Image
-							              source={{uri: 'http://icons.iconarchive.com/icons/icons8/ios7/512/Healthcare-Scales-Of-Balance-Filled-icon.png' }}
-							            />
+								<Text>{props.data.Spacing} Inches Spacing</Text>
 			
 						<Text>Climate</Text>
 						<Text>{props.data.Climate}</Text>
@@ -55,5 +41,14 @@ const Plant = (props) => {
 		  	  }
 		</View>
 )};
+
+const styles = StyleSheet.create({
+  mainPhoto: {
+    height: 50,
+    width: 50,
+    justifyContent: "flex-start",
+    padding: 20,
+  },
+});
 
 export default Plant;
