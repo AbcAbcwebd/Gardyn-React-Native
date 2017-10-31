@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, TouchableHighlight } from 'react-native';
+import { Text, View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
   const PlantCard = (props) => {
     return (
-        <TouchableHighlight 
+        <TouchableOpacity
           style={styles.parentView}
           onPress={() => {console.log("Pressed")}}
         >
@@ -14,7 +14,7 @@ import { Text, View, Image, StyleSheet, TouchableHighlight } from 'react-native'
             />
             <Text style={styles.title}>{props.item.title}</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
     );
 }
 
