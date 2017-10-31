@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Navbar from "./components/Navbar";
 import AllPlants from "./components/AllPlants";
+import { Switch, Route, Router } from 'react-router-dom';
 
 export default class App extends React.Component {
   render() {
@@ -10,9 +11,13 @@ export default class App extends React.Component {
         <Navbar 
           style={styles.navbar}
         />
-        <AllPlants 
-
-        />
+        <Router>
+        <Switch>
+          <Route exact path='/' component={AllPlants} />
+          <Route path='/plants/:name' component={AllPlants} />
+          <Route path='/guide/:name' component={AllPlants}/>
+        </Switch>
+        </Router>
       </View>
     );
   }
