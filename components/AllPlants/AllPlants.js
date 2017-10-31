@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, Button } from 'react-native';
 import PlantCard from "../PlantCard";
 
+const testURL = "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/tomatoplant.jpg?itok=KJNBeA6X";
+
 export default class AllPlants extends Component {
   // This stores what plant data should be displayed
   // Includes dummy data in case the component loads before the data is retrieved. 
@@ -48,6 +50,7 @@ export default class AllPlants extends Component {
             this.state.plantData.map(item => (
               <PlantCard
                 item = {item}
+                image = {testURL}
               />
             ))
         }  

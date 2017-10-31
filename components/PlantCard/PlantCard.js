@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 
-//export default class PlantCard extends Component {
   const PlantCard = (props) => {
-//  render() {
     return (
       <View
         style={styles.parentView}
       >
         <Image
           style={styles.logo}
-          source={{uri: 'https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/tomatoplant.jpg?itok=KJNBeA6X'}}
+          source={{uri: props.image }}
         />
         <Text style={styles.title}>{props.item.title}</Text>
       </View>
     );
-//  }
 }
 
 const styles = StyleSheet.create({
