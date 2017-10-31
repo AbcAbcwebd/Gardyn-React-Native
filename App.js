@@ -15,6 +15,8 @@ export default class App extends React.Component {
         changeDisplay={this.changeDisplay}
       />
     } else if (!this.state.displaying.body) {
+      console.log("Passing props:");
+      console.log(this.state.displaying)
       return <PlantDetail
         data={this.state.displaying}
       />
@@ -25,6 +27,8 @@ export default class App extends React.Component {
 
   changeDisplay = (newValue) => {
     console.log("Function hit")
+    console.log("Setting to:")
+    console.log(newValue);
     this.setState({
       displaying: newValue
     })

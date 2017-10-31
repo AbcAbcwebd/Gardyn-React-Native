@@ -9,23 +9,23 @@ const Plant = (props) => {
 		  <View>
 		  	<Text>{props.title}</Text>
 		      {
-	      	  (!props.isCat)
+	      	  (!props.data.isCat)
 				?
 				<View>
 				        	<Image
-				              source={{uri: props.imageURL }}
+				              source={{uri: props.data.imageURL }}
 				            />
 
 								<Image
 					              source={{uri: 'http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico' }}
 					            />
-								<Text>{props.Sunlight} Hours</Text>
-								<Text>{props.skillLevel}</Text>
+								<Text>{props.data.Sunlight} Hours</Text>
+								<Text>{props.data.skillLevel}</Text>
 
 								<Image
 					              source={{uri: 'http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png' }}
 					            />
-								<Text>{props.Spacing} Inches</Text>
+								<Text>{props.data.Spacing} Inches</Text>
 
 								<Text>Support: </Text>
 										<Image
@@ -36,17 +36,17 @@ const Plant = (props) => {
 							            />
 			
 						<Text>Climate</Text>
-						<Text>{props.Climate}</Text>
+						<Text>{props.data.Climate}</Text>
 						<Text>Special</Text>
-						<Text>{props.Water}</Text>
-						<Text>{props.Special}</Text>
+						<Text>{props.data.Water}</Text>
+						<Text>{props.data.Special}</Text>
 				</View>
 				:
 				<View>
-				  <Text>{props.description}</Text>
+				  <Text>{props.data.description}</Text>
 				  <Text>Varieties:</Text>
 					{
-						props.childPlants.map(item => (
+						props.data.childPlants.map(item => (
 							<PlantCard
 								item = {item}
 							/>
