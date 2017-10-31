@@ -10,7 +10,9 @@ export default class Home extends Component {
   render() {
     return (
       <View>
-        <AllPlants /> 
+        <AllPlants 
+          changeDisplay={this.props.changeDisplay}
+        /> 
       </View>
     );
   }

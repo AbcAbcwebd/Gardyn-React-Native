@@ -5,7 +5,7 @@ import { Text, View, Image, StyleSheet, TouchableOpacity} from 'react-native';
     return (
         <TouchableOpacity
           style={styles.parentView}
-          onPress={() => {console.log("Pressed")}}
+          onPress={props.changeDisplay}
         >
           <View>
             <Image

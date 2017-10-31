@@ -18,9 +18,6 @@ export default class AllPlants extends Component {
         .then(function (response) {
           console.log("About to log response");
           console.log(response._bodyText);
-//          console.log("Is array?" + response._bodyText.isArray);
-//          let returnArray = response._bodyText.split("{");
- //         console.log(returnArray);
           const returnedObj = JSON.parse(response._bodyText);
           parentObj.setState({
             plantData: returnedObj
@@ -43,7 +40,7 @@ export default class AllPlants extends Component {
             this.state.plantData.map(item => (
               <PlantCard
                 item = {item}
-                image = {testURL}
+                changeDisplay={this.props.changeDisplay}
               />
             ))
         }  

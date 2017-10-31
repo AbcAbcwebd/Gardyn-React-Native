@@ -10,8 +10,19 @@ export default class App extends React.Component {
 
   Body = () => {
     if (this.state.displaying === "Home"){
-      return <Text>Body Test</Text>
+      return <Home 
+        changeDisplay={this.changeDisplay}
+      />
+    } else {
+      return <Text>Page failed to load</Text>
     }
+  }
+
+  changeDisplay = (newValue) => {
+    console.log("Function hit")
+    this.setState({
+      displaying: newValue
+    })
   }
 
   render() {
