@@ -38,13 +38,11 @@ export default class App extends React.Component {
   render() {
     return (
       <View>
-        <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']}>
           <Navbar 
             style={styles.navbar}
             changeDisplay={this.changeDisplay}
           />
          {this.Body()}
-        </LinearGradient>
       </View>
     );
   }
