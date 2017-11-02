@@ -16,15 +16,15 @@ const Plant = (props) => {
 				    source={{uri: props.data.imageURL }}
 				/>
 
-								<Text style={styles.textCenter}>{props.data.Sunlight} Hours of Sunlight</Text>
+								<Text style={styles.textCenter}>{props.data.sunlight} Hours of Sunlight</Text>
 								<Text style={styles.textCenter}>{props.data.skillLevel}</Text>
-								<Text style={styles.textCenter}>{props.data.Spacing} Inches Spacing</Text>
+								<Text style={styles.textCenter}>{props.data.spacing} Inches Spacing</Text>
 			
 						<Text style={styles.textCenter}>Climate</Text>
-						<Text style={styles.textCenter}>{props.data.Climate}</Text>
+						<Text style={styles.textCenter}>{props.data.climate}</Text>
 						<Text style={styles.textCenter}>Special</Text>
-						<Text style={styles.textCenter}>{props.data.Water}</Text>
-						<Text style={styles.textCenter}>{props.data.Special}</Text>
+						<Text style={styles.textCenter}>{props.data.water}</Text>
+						<Text style={styles.textCenter}>{props.data.special}</Text>
 				</View>
 				:
 				<View>
